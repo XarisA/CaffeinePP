@@ -9,7 +9,7 @@ This application was developed as a command line alternative of (linux) caffeine
 ## Coming soon
 
 - Command Line options.
-- Settings and timer settings.
+- Application and timer settings.
 - Gui version with system tray.
 
 # Download
