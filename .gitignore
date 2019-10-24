@@ -34,3 +34,6 @@
 # Debug folders
 Debug
 Release
+
+# Visual Studio files
+.vs/

@@ -11,6 +11,10 @@ This application was developed as a command line alternative of (linux) caffeine
 - Settings and timer settings.
 - Gui version with system tray.
 
+# Releases
+
+You can downoad the latest release from [here!](https://github.com/XarisA/CaffeinePP/releases/latest)
+
 # License
 
 GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)
