@@ -166,6 +166,9 @@
   <ItemGroup>
     <ResourceCompile Include="caffeine++.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\white_coffee_hot.ico" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

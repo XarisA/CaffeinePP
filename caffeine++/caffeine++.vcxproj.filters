@@ -35,4 +35,9 @@
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\white_coffee_hot.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
