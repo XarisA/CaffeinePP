@@ -15,8 +15,30 @@ void signal_handler(int signum) {
 }
 
 
-int main()
+int main(int argc, char *argv[], char *envp[])
 {
+
+	if (argc > 2)
+	{
+		cout << "Wrong number of arguments.";
+		return 0;
+	}
+	else if (argc == 2)
+	{
+		if (strcmp(argv[1],"-m") || strcmp(argv[1], "-start-minimised"))
+		{
+			ShowWindow(GetConsoleWindow(), SW_MINIMIZE);
+		}
+		else
+		{
+			cout << "Invalid arguments, please try again.\n";
+			Sleep(2000);
+			exit(0);
+		}
+		//Debug
+		//cout << "\nArgc is \"" << argc << "\"" << "\nArgv is :\"" << argv[1] << "\"\n" << (argv[1] == "-m" ? "true" : "false")<<"\n";
+	}
+
 	signal(SIGINT, signal_handler);
 	cout << "Caffeine++ is runnning\n";
 	cout << "Use Control-C to stop this service and restore previous state\n";
