@@ -17,26 +17,35 @@ void signal_handler(int signum) {
 
 int main(int argc, char *argv[], char *envp[])
 {
-
-	if (argc > 2)
+	int i;
+	if (argc > 3)
 	{
 		cout << "Wrong number of arguments.";
 		return 0;
 	}
-	else if (argc == 2)
+	else if (argc > 1 and argc <= 3)
 	{
-		if (strcmp(argv[1],"-m") || strcmp(argv[1], "-start-minimised"))
+		for (int i = 1; i < argc; ++i)
 		{
-			ShowWindow(GetConsoleWindow(), SW_MINIMIZE);
+			if (argv[i] == string("-m") || argv[i] == string("-start-minimised"))
+			{
+				ShowWindow(GetConsoleWindow(), SW_MINIMIZE);
+			}
+			else if (argv[i] == string("-t") || argv[i] == string("-timer"))
+			{
+				//TODO Implement Timer function
+				cout << "Running the -t hand\n";
+			}
+			else
+			{
+				cout << "Invalid argument " << argv[i] <<", please try again.\n";
+				ShowWindow(GetConsoleWindow(), SW_NORMAL);
+				Sleep(1500);
+				exit(1);
+			}
+			//Debug
+			//cout << "\nArgc is \"" << argc << "\"" << "\nArgv is :\"" << argv[1] << "\"\n" << (argv[1] == "-m" ? "true" : "false")<<"\n";
 		}
-		else
-		{
-			cout << "Invalid arguments, please try again.\n";
-			Sleep(2000);
-			exit(0);
-		}
-		//Debug
-		//cout << "\nArgc is \"" << argc << "\"" << "\nArgv is :\"" << argv[1] << "\"\n" << (argv[1] == "-m" ? "true" : "false")<<"\n";
 	}
 
 	signal(SIGINT, signal_handler);
