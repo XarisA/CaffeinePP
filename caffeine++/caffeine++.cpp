@@ -6,28 +6,31 @@
 
 using namespace std;
 
+HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+CONSOLE_CURSOR_INFO cursorInfo;
+
 
 void signal_handler(int signum) {
-	cout << "Caught exit signal " << signum << endl;
 	SetThreadExecutionState(ES_CONTINUOUS);
-	cout << "Cya!";
 	Sleep(1000);
+	cursorInfo.bVisible = true;
+	SetConsoleCursorInfo(out, &cursorInfo);
 	exit(signum);
 }
 
 
 int main(int argc, char *argv[], char *envp[])
 {
-	//#define NUM_SECS 1.0f // delay period
 	bool control_switch = 1;
 	time_t start, end;
 	start = time(NULL);
-	double elapsed; //seconds
+	double elapsed;
 	double timer=0;
+
 	if (argc > 4)
 	{
 		cout << "Wrong number of arguments.";
-		return 0;
+		return EXIT_FAILURE;
 	}
 	else if (argc > 1 and argc <= 4)
 	{
@@ -45,18 +48,15 @@ int main(int argc, char *argv[], char *envp[])
 			}
 			else
 			{
-				cout << "\rInvalid argument " << argv[i] <<", please try again.\n";
+				cout << "\rInvalid argument " << argv[i] <<", please try again.";
 				ShowWindow(GetConsoleWindow(), SW_NORMAL);
 				Sleep(1500);
 				return EXIT_FAILURE;
 			}
-			//Debug
-			//cout << "\nArgc is \"" << argc << "\"" << "\nArgv is :\"" << argv[1] << "\"\n" << (argv[1] == "-m" ? "true" : "false")<<"\n";
 		}
 	}
+
 	// Hide Cursor from cmd
-	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_CURSOR_INFO cursorInfo;
 	GetConsoleCursorInfo(out, &cursorInfo);
 	cursorInfo.bVisible = false;
 	SetConsoleCursorInfo(out, &cursorInfo);
@@ -65,8 +65,8 @@ int main(int argc, char *argv[], char *envp[])
 	signal(SIGINT, signal_handler);
 
 	//Inform user
-	cout << "Caffeine++ is runnning\n";
-	cout << "Use Control-C to stop this service and restore previous state\n";
+	cout << "Caffeine++ is runnning" << endl;
+	cout << "Use Control-C to stop this service and restore previous state" << endl;
 	
 	// Run Caffeine++
 	while (control_switch) {
