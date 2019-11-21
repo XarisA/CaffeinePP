@@ -39,8 +39,6 @@ int main(int argc, char *argv[], char *envp[])
 			}
 			else if (argv[i] == string("-t") || argv[i] == string("-timer"))
 			{
-				//TODO Implement Timer function
-				cout << "\nRunning the -t hand";
 				string input = argv[i + 1];
 				timer = atof(input.c_str());
 				i++;
@@ -58,7 +56,7 @@ int main(int argc, char *argv[], char *envp[])
 	}
 	// Hide Cursor from cmd
 	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_CURSOR_INFO     cursorInfo;
+	CONSOLE_CURSOR_INFO cursorInfo;
 	GetConsoleCursorInfo(out, &cursorInfo);
 	cursorInfo.bVisible = false;
 	SetConsoleCursorInfo(out, &cursorInfo);
@@ -79,5 +77,7 @@ int main(int argc, char *argv[], char *envp[])
 			control_switch = 0;
 		SetThreadExecutionState(ES_CONTINUOUS | ES_DISPLAY_REQUIRED | ES_SYSTEM_REQUIRED | ES_AWAYMODE_REQUIRED);
 	}
+	cursorInfo.bVisible = true;
+	SetConsoleCursorInfo(out, &cursorInfo);
 	return EXIT_SUCCESS;
 }
