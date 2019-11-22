@@ -27,12 +27,12 @@ int main(int argc, char *argv[], char *envp[])
 	double elapsed;
 	double timer=0;
 
-	if (argc > 4)
+	if (argc > 5)
 	{
 		cout << "Wrong number of arguments.";
 		return EXIT_FAILURE;
 	}
-	else if (argc > 1 and argc <= 4)
+	else if (argc > 1 and argc <= 5)
 	{
 		for (int i = 1; i < argc; ++i)
 		{
@@ -45,6 +45,10 @@ int main(int argc, char *argv[], char *envp[])
 				string input = argv[i + 1];
 				timer = atof(input.c_str());
 				i++;
+			}
+			else if (argv[i] == string("-i") || argv[i] == string("-hide-console"))
+			{
+				ShowWindow(GetConsoleWindow(), SW_HIDE);
 			}
 			else
 			{
