@@ -26,7 +26,7 @@ You can download latest x86 package from [here.](https://support.microsoft.com/e
 
 GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)
 
-Copyright (c) 2019 Harris Arvanitis <xaris@tuta.io>
+Copyright (c) 2019 Harris Arvanitis
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
