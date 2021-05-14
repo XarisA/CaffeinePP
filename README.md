@@ -6,23 +6,16 @@ This application was developed as a command line alternative of (linux) caffeine
 
 ![caffeine++](https://user-images.githubusercontent.com/3985557/67888246-737eea00-fb55-11e9-90ca-70f2b1a249a0.PNG)
 
-## Coming soon
-
-- More Command Line options.
-- Application and timer settings.
-- Gui version with system tray.
-- Add help file.
-
-# Download
+## Download
 
 You can download the latest release from [here!](https://github.com/XarisA/CaffeinePP/releases/latest)
 
-# Requirements
+## Requirements
 
 caffeine++ just like any other c++ application needs microsoft visual c++ redistributables to run.
 You can download latest x86 package from [here.](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 
-# License
+## License
 
 GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)
 
