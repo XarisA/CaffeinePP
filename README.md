@@ -51,9 +51,9 @@ The command line arguments can be used in the command prompt but also as paramet
 - open the shortcut’s Properties window
 - in the shortcut tab, add your parameters to the target field
 
-![caffeine++_shortcut](https://github.com/XarisA/CaffeinePP/assets/3985557/9a19b8ce-350b-434d-a977-d644e0821b4d)
-![caffeine++_shortcut2](https://github.com/XarisA/CaffeinePP/assets/3985557/12e0f4c6-00a7-46a4-adbd-931ca2d35897)
+![248456477-12e0f4c6-00a7-46a4-adbd-931ca2d35897](https://github.com/XarisA/CaffeinePP/assets/3985557/10a212d4-8969-474b-b386-22069c7baa3e)
 
+![248456472-9a19b8ce-350b-434d-a977-d644e0821b4d](https://github.com/XarisA/CaffeinePP/assets/3985557/190c5d7d-533c-49d6-861c-fa8249c96bec)
 
 ## Download
 
