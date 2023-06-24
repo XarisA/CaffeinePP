@@ -4,7 +4,7 @@ Caffeine++ is a free, open-source console application written in C++ that can pr
 Basically, it prevents the screen from turning off and your computer from going to sleep.
 This application was developed as a command-line alternative to Linux caffeine on Windows.
 
-![caffeine++](https://user-images.githubusercontent.com/3985557/67888246-737eea00-fb55-11e9-90ca-70f2b1a249a0.PNG)
+![caffeine++](https://github.com/XarisA/CaffeinePP/assets/3985557/8a838dab-e4cf-4b2b-a619-3d622bbe722b)
 
 ## Command Line Arguments
 
