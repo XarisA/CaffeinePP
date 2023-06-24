@@ -1,10 +1,56 @@
 # caffeine++
 
 Caffeine++ is a free, open source console application written in c++ which can prevent the system from entering the power-saving mode.
-Basically it prevents the screen from turning off and your computer from going to sleep.
-This application was developed as a command line alternative of (linux) caffeine on windows.
+Basically, it prevents the screen from turning off and your computer from going to sleep.
+This application was developed as a command line alternative to linux caffeine on windows.
 
 ![caffeine++](https://user-images.githubusercontent.com/3985557/67888246-737eea00-fb55-11e9-90ca-70f2b1a249a0.PNG)
+
+## Command Line Arguments
+
+Caffeine++ supports command line arguments with the following options:
+
+```cmd
+arguments:
+  -m,       -start-minimised       start with thw window minimized
+  -t time,  -timer                 run for specific time in seconds
+  -i,       -hide-console          hide cmd
+                                   (you will need to kill the app for exit)
+  -k,       -simulate-keypress     Simulate key process in the console
+                                   (useful for specific apps)       
+```
+
+### Examples
+
+#### Run the app for an hour
+
+```cmd
+> caffeine++.exe -t 3600
+```
+
+#### Run the app for an hour and hide the command window
+
+```cmd
+> caffeine++.exe -t 3600 -i
+```
+
+#### Run app infinitely and Simulate keypress
+
+```cmd
+> caffeine++.exe -k
+```
+
+## Command Line Arguments in Shortcut
+
+The command line arguments can be used in the command prompt but also as parameters in the shortcut.
+
+### Example
+
+- create a shortcut pointing to the executable file
+- open the shortcut’s Properties window
+- in the shortcut tab, add your parameters to the target field
+
+
 
 ## Download
 
