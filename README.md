@@ -1,24 +1,25 @@
 # caffeine++
 
-Caffeine++ is a free, open source console application written in c++ which can prevent the system from entering the power-saving mode.
+Caffeine++ is a free, open-source console application written in C++ that can prevent the system from entering the power-saving mode.
 Basically, it prevents the screen from turning off and your computer from going to sleep.
-This application was developed as a command line alternative to linux caffeine on windows.
+This application was developed as a command-line alternative to Linux caffeine on Windows.
 
 ![caffeine++](https://user-images.githubusercontent.com/3985557/67888246-737eea00-fb55-11e9-90ca-70f2b1a249a0.PNG)
 
 ## Command Line Arguments
 
-Caffeine++ supports command line arguments with the following options:
+Caffeine++ supports command-line arguments with the following options:
 
-```cmd
+```text
 arguments:
-  -m,       -start-minimised       start with thw window minimized
-  -t time,  -timer                 run for specific time in seconds
+  -m,       -start-minimised       start with the window minimized
+  -t time,  -timer                 runs for a specific time in seconds
   -i,       -hide-console          hide cmd
-                                   (you will need to kill the app for exit)
   -k,       -simulate-keypress     Simulate key process in the console
-                                   (useful for specific apps)       
 ```
+
+- Hide console can be used if you want to "start the program as a service" by placing a shortcut in the startup folder in Windows.
+- Simulate keypress is an option used simply as graphic animation and nothing more
 
 ### Examples
 
@@ -34,7 +35,7 @@ arguments:
 > caffeine++.exe -t 3600 -i
 ```
 
-#### Run app infinitely and Simulate keypress
+#### Run the app infinitely and Simulate keypress
 
 ```cmd
 > caffeine++.exe -k
@@ -44,12 +45,14 @@ arguments:
 
 The command line arguments can be used in the command prompt but also as parameters in the shortcut.
 
-### Example
+### Examples
 
 - create a shortcut pointing to the executable file
 - open the shortcut’s Properties window
 - in the shortcut tab, add your parameters to the target field
 
+![caffeine++_shortcut](https://github.com/XarisA/CaffeinePP/assets/3985557/9a19b8ce-350b-434d-a977-d644e0821b4d)
+![caffeine++_shortcut2](https://github.com/XarisA/CaffeinePP/assets/3985557/12e0f4c6-00a7-46a4-adbd-931ca2d35897)
 
 
 ## Download
@@ -58,7 +61,7 @@ You can download the latest release from [here!](https://github.com/XarisA/Caffe
 
 ## Requirements
 
-caffeine++ just like any other c++ application needs microsoft visual c++ redistributables to run.
+caffeine++ just like any other C++ application needs microsoft visual c++ redistributables to run.
 You can download latest x86 package from [here.](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 
 ## License
